@@ -18,16 +18,13 @@ const SEARCH_SET_LOADING = 'SEARCH_SET_LOADING'
 
 export function search(dispatch, getState) {
   dispatch({ type: 'SEARCH_SET_LOADING' })
-  console.log(getState())
   const { cuisine, diet, mealType, allergies, resultsNumber } = getState().search.form
 
   let tags = []
   if (cuisine.length) tags.push(cuisine);
   if (diet.length) tags.push(diet);
   if (mealType) tags.push(mealType);
-  // tags.push(...allergies)
 
-  console.log(tags)
 let url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`
 if (tags.length) {
   url += '&tags=' + encodeURIComponent(tags.join(','))
@@ -40,8 +37,6 @@ if (resultsNumber) {
 if (allergies.length) {
   url += `&intolerances=${encodeURIComponent(allergies)}`
 }
-
-console.log(url)
 
     axios.get(url)
       .then((res) => {

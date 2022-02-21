@@ -14,10 +14,11 @@ const setCuisine = (value) => {
 
   return (
     <div>
-      <Select placeholder='Select A Cuisine' value={cuisine} onChange={(e) => setCuisine(e.target.value)}>
+      <b>Select a cuisine</b>
+      <Select value={cuisine} onChange={(e) => setCuisine(e.target.value)}>
         <option value="">All</option>
         {cuisines.map((cuisine) => {
-          return <option>{cuisine.cuisine}</option>
+          return <option key={cuisine.id}>{cuisine.cuisine}</option>
         })}
       </Select><br />
     </div>

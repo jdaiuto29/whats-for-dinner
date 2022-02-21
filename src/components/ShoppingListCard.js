@@ -26,6 +26,16 @@ return [
 ]
 },[])
 
+//combine ingredients in the shopping cart
+// const shoppingCart = ingredients.reduce((newCart, ingredient) => {
+//   const key = `${ingredient.name} (${ingredient.unit})`
+// if (!newCart[ingredient.name]) {
+//   newCart[ingredient.name] = 0;
+//   }
+//   newCart[ingredient.name] += ingredient.amount;
+//   return newCart;
+// }, {});
+
   return <div> 
                 {ingredients.map((ingredient) => {
                   return <div><input type="checkbox" name={ingredient.name} onChange={(e) => handleRemoveIngredient(ingredient.name, e.target.checked)} value={ingredient.name} /><label id={ingredient.name} className='' for={ingredient.name}> {ingredient.name} ({ingredient.amount.toFixed(2)} {ingredient.unit}) </label><br />

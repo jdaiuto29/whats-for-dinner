@@ -13,10 +13,11 @@ export default function DietSearch() {
   }
   return (
     <div>
-      <Select placeholder='Select A Diet' value={diet} onChange={(e) => setDiet(e.target.value)}>
+      <b>Select a diet</b>
+      <Select value={diet} onChange={(e) => setDiet(e.target.value)}>
         <option value="">All</option>
         {diets.map((diet) => {
-          return <option>{diet.diet}</option>
+          return <option key={diet.id}>{diet.diet}</option>
         })}
       </Select><br />
     </div>

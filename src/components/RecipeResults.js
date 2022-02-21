@@ -17,12 +17,12 @@ export default function RecipeResults() {
   />
     )}
   return (
-
+<div>
       <SimpleGrid columns={{ sm: 1, md: 3, lg: 4 }}>
         {results.map(recipe => {
-          return <Box><RecipeCard key={recipe.id} recipe={recipe} /></Box>
+          return <Box key={recipe.id}><RecipeCard key={recipe.id} recipe={recipe} /></Box>
         })}
       </SimpleGrid>
-    
+      </div>
   )
 }

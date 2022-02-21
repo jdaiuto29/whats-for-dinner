@@ -5,6 +5,7 @@ import ShoppingListCard from '../components/ShoppingListCard'
 function ShoppingList() {
 
   return (
+    <div>
         <Box m={10}>
           <Center m={7}>
       <Image src="https://see.fontimg.com/api/renderfont4/83GA/eyJyIjoiZnMiLCJoIjo4OCwidyI6MTI1MCwiZnMiOjcwLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/WW91ciBTaG9wcGluZyBsaXN0IC4gLiAuIA/rolleteqaku-regular.png" alt='shopping list'/> 
@@ -17,7 +18,7 @@ function ShoppingList() {
           </Box>
           </Center>
           </Box>
-          
+          </div>
   )
 }
 

@@ -12,10 +12,12 @@ export default function NumberOfResults() {
 
   return (
     <div>
-      <Select value={resultsNumber} onChange={(e) => setResultsNumber(e.target.value)} placeholder='Number of Results'>
+      <b>How many results?</b>
+      <Select value={resultsNumber} onChange={(e) => setResultsNumber(e.target.value)} >
         <option>1</option>
         <option>5</option>
         <option>10</option>
+        <option>15</option>
         </Select><br />
     </div>
   )

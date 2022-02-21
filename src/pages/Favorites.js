@@ -7,6 +7,7 @@ function Favorites() {
   const favorites = useSelector((state) => state.favorites)
 
   return (
+    <div>
     <Box>
       <Center pt={10}>
       <img src="https://see.fontimg.com/api/renderfont4/83GA/eyJyIjoiZnMiLCJoIjo4OCwidyI6MTI1MCwiZnMiOjcwLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/WW91ciBGYXZvcml0ZXMgLiAuIC4/rolleteqaku-regular.png" alt='favorites'/>
@@ -18,6 +19,7 @@ function Favorites() {
         })}
       </SimpleGrid>}
       </Box>
+      </div>
   )
 }
 

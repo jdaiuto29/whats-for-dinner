@@ -42,7 +42,7 @@ export default function RecipeCard(props) {
   }
 
   return (
-
+<div>
     <Center>
       <Box w="300px" rounded="20px"
         overflow="hidden" bg={'white'} mt={10}>
@@ -64,7 +64,7 @@ export default function RecipeCard(props) {
                   Price Per Serving: ${(recipe.pricePerServing / 100).toFixed(2)}<br />
                   Ready in: {recipe.readyInMinutes} minutes<br />
                   Taste Score: {recipe.spoonacularScore}%<br />
-                  WW Smart Points: <b>{Math.round(recipe.weightWatcherSmartPoints / recipe.servings)}</b>
+                  WW Smart Points: <b>{recipe.weightWatcherSmartPoints}</b>
                 </Text>
             <Button colorScheme="blue" onClick={handleToggle}>
               {show ? 'Hide' : 'Show'} Recipe
@@ -115,5 +115,6 @@ export default function RecipeCard(props) {
         </Box >
       </Box >
     </Center>
+    </div>
   )
 }
